@@ -28,5 +28,5 @@ git remote add origin git@github.com:github_username/rep_name.git
 ssh -T git@Host #git@HostName git@User User@Host User@Hostname都不行
 ##git本地库设置
 git remote add origin git@Host:github_username/rep_name.git
-git remote add origin git@github.com:github_username/rep_name.git #有问题 error:repository not found
+git remote add origin git@github.com:github_username/rep_name.git ##有问题 er    ror:repository not found 但是Mlnblk可以，就算是远程private仓库也可以,猜测当前pc有一个默认ssh可以github.com这样使用
 #origin git@User:github_username/rep_name.git 不行
