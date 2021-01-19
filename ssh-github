@@ -1,0 +1,32 @@
+##创建密钥
+ssh-keygen -t rca -C "Email@xx.com"
+ssh -T git@github.com   #连接成功
+##复制公钥(.pub)文件内容到github账户的ssh_keys中
+##git本地库设置
+git remote add origin git@github.com:github_username/rep_name.git
+
+##一台电脑连接多个github账户
+##创建密钥（连接几个账户就创建几对ssh密钥）并放到对应账户ssh_keys中
+##省略......
+
+##.ssh目录下创建config文件并编辑
+  # 配置Mlnblack
+  Host githubMbk
+      HostName github.com
+      IdentityFile /home/merlin/.ssh/id_rsa
+      PreferredAuthentications publickey
+      User Mlnblack
+ 
+  # 配置Merlinb001
+  Host github001
+      HostName github.com
+      IdentityFile /home/merlin/.ssh/Merlinb001
+      PreferredAuthentications publickey
+      User Merlinb001
+
+##测试ssh连接
+ssh -T git@Host #git@HostName git@User User@Host User@Hostname都不行
+##git本地库设置
+git remote add origin git@Host:github_username/rep_name.git
+git remote add origin git@github.com:github_username/rep_name.git #有问题 error:repository not found
+#origin git@User:github_username/rep_name.git 不行
