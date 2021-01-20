@@ -1,0 +1,74 @@
+桌面
+Windows键
+win+e	资源管理器
+win+r	运行
+win+v	剪切板
+win+i       设置
+win+l	锁屏
+win+tab
+win+d/m   显示/隐藏桌面
+Ctrl键
+Ctrl+a	全选
+Ctrl+c	复制
+Ctrl+v	粘贴
+Ctrl+x      剪切
+Ctrl+z	撤回
+Ctrl+y	撤销
+Ctrl+空格  中英文切换
+Ctrl+左键  选中多个文件
+Alt+F4     关闭当前窗口
+Shift+Delete  永久删除文件
+Ctrl+Shift+ESC  任务管理器
+
+触摸板
+双指敲击--------右键
+双指上下滑动---控制滚动条
+双指放大缩小---控制视图大小
+三指上下滑动---显示桌面或已打开窗口
+三指左右滑动---切换应用
+三指敲击--------启动Search
+四指敲击--------操作中心
+
+浏览器
+面板：收藏夹、历史记录、阅读列表、下载列表
+Ctrl+M  阅读列表
+Ctrl+H   历史记录
+Ctrl+I    收藏夹         Ctrl+D  加入收藏
+Ctrl+J   下载列表
+标签
+Ctrl+T    新建    Ctrl+K      重复打开当前标签页
+Ctrl+W  关闭
+Ctrl+1，2，...，8 切换标签页
+Ctrl+9    切换到最后标签页
+页面
+F4/ALT+D   选中地址栏内容
+Ctrl+F         页面查找
+Ctrl+P         打印页面
+F5/Ctrl+R    刷新页面
+Ctrl+Shift+M  添加笔记
+Alt+左右      前进、后退
+
+WPS
+
+
+IDE
+Codeblocks
+注释
+Ctrl+Shift+C 注释当前行或选中部分
+Ctrl+Shift+X 解除注释
+代码控制
+Ctrl+J   自动补全语句
+代码删减
+Ctrl+BackSpace/Delete  删前后单词
+Ctrl+Shift+BackSpace/Delete 删当前行前后
+跳转
+Ctrl+Home/End  跳转文件头/尾
+Alt+Home/End   跳转行头/尾
+Ctrl+[/]	           按段落跳转
+Ctrl+上下            按行上下跳转
+行操作
+Ctrl+L  行剪切
+Ctrl+Shift+T 行复制
+Ctrl+Shift+L 行删除
+Alt+上下  将该行上下移动
+16:21 2019/11/1

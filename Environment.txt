@@ -1,0 +1,112 @@
+##环境部署规范：环境名称；环境配置步骤；%安装成功测试；$简单使用方式
+#CentOS部署问题：通过rpm、yum等包管理器下载软件虽可以解决包依赖问题但下载的包的路径以及包本身不一定是自己想要的，建议从Windows端或者Linux桌面环境到软件官网下载tar.gz格式的包，Windows可通过sftp传输（没有编译应该是编译好的包）
+#CenOS部署：即软件安装方式：包管理安装：yum、rpm、apt-get、dkpg、apt-aptitude
+#（编译好的包可直接解压使用）源码安装：git clone、wget、sftp（tar压缩包）
+#                                               1.解压 2. ./configure 参数prefix 3.make 4.make install  （make uninstall/clean 卸载）
+#配置好环境变量之后需重新打开cmd
+
+java开发：
+1.下载JDK（包含JRE、JVM）
+2.配置环境变量（ 注：Linux在/etc/profile里改，默认路径/usr/lib/jvm/ %echo $--)
+	JAVA_HOME="JDK文件夹目录（包括JDK文件夹)"
+	CLASSPATH="%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;"
+	PATH="%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;"
+
+     安装IDE：NetBeans、Eclipse
+%java -version
+$javac    *.java     //命令行里编译
+$java      *            //运行 注：没有class后缀名
+
+
+网站开发：
+
+~~Tomcat轻量级Web服务器开发
+1.需下载JDK
+2.下载Tomcat
+3.bin下执行startup.sh开启服
+	shutdown.sh关闭服务
+%网页浏览器打开：localhost:8080/出现Tomcat页面（内网IP可以打开）
+%CentOS端：公网IP:8080,links和lynx可以打开，w3m打不开
+%CentOS端：localhost:8080/只有lynx可以打开
+$webapps文件夹为默认浏览器对应打开位置
+
+
+~~Node.js JS服务器运行环境配置（服务器端端口号3000打不开，需多次尝试其他端口，可能是内网外网转换的问题）
+使用源码包安装之后不知该如何操作，目录下没有bin文件夹，后来使用yum命令安装的
+%node -vn 可查看本机node版本
+$node 进入node页面（同时下载npm） .exit退出
+
+~express框架安装
+npm install -g express-generator (express 4.x把命令行工具分离出来，需要加上-generator)
+配置环境变量，Path
+%node下require("express")
+%cmd express --version
+
+Android开发：
+
+~~Android Studio开发
+1.需下载JDK，Android SDK，Android Studio，JDK配置环境变量，AndroidSDK变量需在AndroidStudio内配置
+2.通过SVD manager下载Android SDK，通过AVD manager下载模拟器（包括镜像）
+%中途没报错就是安装成功了 -_-||
+（首次问题 1.URI未注册，根据提示在File->Settings->Languages&Frameworks->Schemas and DTDs右侧下方添加对应URI
+	  2....is not allowed here 根据提示规范代码以及点击Alt+Enter，原理->母鸡  
+ ）
+
+
+
+
+
+
+
+
+
+
+LeapMotion开发
+版本—4.00
+SDK区别：4.0之后是LeapC.h   3.1等是Leap.h
+
+开发环境配置：
+VS：1.包含库目录2.库目录  链接器—输入lib文件
+	有时需要打开Microsoft符号服务器选项
+
+
+Kinect开发
+确定Kinect版本  V2
+
+
+
+OpenGL
+glfw库安装
+glad源文件
+
+
+
+PCL
+依赖库：
+
+
+boost
+VS2019+win10   x64
+1.下载boost1.70版本
+2.点击bootstrap.bat 
+3.命令行bjam.exe --toolset=msvc-14.1 architecture=x86 address-model=64 link=static --build-type=complete --with-system --with-thread --with-date_time --with-filesystem --with-serialization
+include lib设置
+
+Opencv
+依赖库：openNI 
+
+
+
+
+
+
+
+CMake编译      （cmake版本以及x32-x64以及VS版本都会对生成程序有影响）
+1.设定好源码目录及二进制目录
+2.Configure-Generate
+3.VS打开对应项目并生成解决方案
+4.src下的debug下的lib文件即是编译成果
+
+
+opencv---install文件夹生成解决方案
+
