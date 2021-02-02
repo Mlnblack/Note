@@ -1,0 +1,35 @@
+PCL_ROOT
+D:\program\IT\PCL 1.9.1
+
+OPENNI2_INCLUDE64
+%PCL_ROOT%\3rdParty\OpenNI2\Include\
+
+OPENNI2_LIB64
+%PCL_ROOT%\3rdParty\OpenNI2\Lib\
+
+OPENNI2_REDIST64
+%PCL_ROOT%\3rdParty\OpenNI2\Redist\
+
+%PCL_ROOT%\bin
+%PCL_ROOT%\3rdParty\FLANN\bin
+%PCL_ROOT%\3rdParty\VTK\bin
+%PCL_ROOT%\3rdParty\Qhull\bin
+%OPENNI2_REDIST64%
+%PCL_ROOT%\3rdParty\Boost\lib
+
+INCLUDE
+D:\program\IT\PCL 1.6.0\3rdParty\VTK\include\vtk-5.8
+D:\program\IT\PCL 1.6.0\3rdParty\Qhull\include
+D:\program\IT\PCL 1.6.0\3rdParty\OpenNI2\Include
+D:\program\IT\PCL 1.6.0\3rdParty\FLANN\include
+D:\program\IT\PCL 1.6.0\3rdParty\Eigen\include
+D:\program\IT\PCL 1.6.0\3rdParty\Boost\include\boost
+D:\program\IT\PCL 1.6.0\include\pcl-1.6
+
+LIB
+D:\program\IT\PCL 1.6.0\3rdParty\VTK\lib\vtk-5.8
+D:\program\IT\PCL 1.6.0\3rdParty\Qhull\lib
+D:\program\IT\PCL 1.6.0\3rdParty\OpenNI2\Lib
+D:\program\IT\PCL 1.6.0\3rdParty\FLANN\lib
+D:\program\IT\PCL 1.6.0\3rdParty\Boost\lib
+D:\program\IT\PCL 1.6.0\lib

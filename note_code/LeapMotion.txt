@@ -1,0 +1,29 @@
+////LeapMotion常用代码
+//2013年上市
+#####数据列表
+##手--Hand
+##Pointables
+##手指--Finger
+##工具--Tool
+##手势--Gesture
+////////初始化   
+//#include<Leap.h>//////listener还有点问题，需自己写Listener类
+myController.addListener(myListener);
+Frame myFrame=myController.frame();
+HandList hands=myFrame.hands()；//获取手列表
+HandList::const_iterator hl=hands.begin();
+Hand myHand=*hl;//获取单个手
+Vector hpalm_position=myhand.palmPosition();//获取手掌位置
+Vector hpalm_normal=myHand.palmNormal();//获取手掌法向
+
+FingerList fingers=myHand.fingers()；
+FingerList::const_iterator fl = fingers.begin();
+Finger first_finger=*fl;
+Finger second_finger=*(fl++);
+Finger third_finger=*(fl++);
+Finger fourth_finger=*(fl++);
+Finger fifth_finger=*(fl++);
+
+myFrame.hands()；
+myFrame.hands()；
+myController.removeListener(myListener);

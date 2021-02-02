@@ -1,0 +1,20 @@
+////Kinect常用代码
+//2010年KinectV1发售  2011年 Kinect 1.x诞生 2014年KinectV2发售  2017停产
+#####6种数据源
+##彩色帧1.ColorFrameSource    1920*1080  30/15fps
+##红外帧2.InfraredFarmeSource  512*424    30fps
+##深度帧3.DepthFrameSource
+##人体轮廓帧4.BodyIndexFrameSource  支持6人
+##人体骨架帧5.BodyFrameSource   0.5m-4.5m   25关节 30fps
+##声音源6.AudioSource
+/////获取并处理数据源接口步骤：
+Sensor->Source->Reader->Frame->Data      (单一数据源获取流程)
+Sensor->Multi_Reader->Multi_Frame->Reference->Frame->Data
+
+////Sensor
+GetDefaultKinectSensor(&KinectName);//获取传感器
+KinectName->Open();                           //打开传感器
+//打开数据源
+KinectName->get_DepthFrameSource(&pDepthFrameSource);
+pDepthFrameSource->OpenReader(&m_pDepthFrameReader);
+m_pDepthFrameReader->AcquireLatestFrame(&pDepthFrame);
