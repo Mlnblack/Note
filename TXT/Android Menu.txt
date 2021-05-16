@@ -1,0 +1,40 @@
+/*
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        menu.add(0,RED_ID,0,R.string.menu1);
+        menu.add(0,GREEN_ID,0,R.string.menu2);
+        menu.add(0,BLACK_ID,0,R.string.menu3);
+        return super.onCreateOptionsMenu(menu);
+        
+        getMenuInflater().inflate(R.menu.menu_main,menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        
+        switch(item.getItemId()){
+            case RED_ID:
+                text.setBackgroundColor(Color.RED);
+                return true;
+            case GREEN_ID:
+                text.setBackgroundColor(Color.GREEN);
+                return true;
+            case BLACK_ID:
+                text.setBackgroundColor(Color.BLACK);
+                return true;
+        }
+       // switch(item.getItemId()){
+       //     case R.id.red:
+                text.setBackgroundColor(Color.RED);
+                break;
+            case R.id.green:
+                text.setBackgroundColor(Color.GREEN);
+                break;
+            case R.id.black:
+                text.setBackgroundColor(Color.BLACK);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+*/

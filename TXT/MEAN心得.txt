@@ -1,0 +1,50 @@
+1.6之前 SPA#
+1.6之后 SPA#！
+
+##测试环境：win10、Edge、Chrome
+引用用的是本地或者是apps.bdimg/的
+引用错误、js语法错误均会造成前端Angular无法使用
+
+
+
+
+6.4
+
+
+SPA标识问题：（apache和express都是这样）
+href=#/name   /可以没有（默认页面要有/）
+config when '/name'    /必须有
+这些不影响其他angular使用
+
+
+
+
+
+折磨了很久，差不多一天：angular对js的引用要在angular.js文件之后，要不然不好使(angualr-route.js无所谓)
+
+路径问题：
+
+app.use(express.static(path.join(__dirname)));可如此设置静态目录，去掉，'public'
+
+不设置静态目录不好使
+
+express静态目录影响HTML和angular.js文件
+
+express设置静态目录之后 /name  ./name  name 都可使用
+
+apache  /name不可用 ./name name 可用
+
+
+6.6
+mongodb基础搞定
+网站的数据库操作也可以，但数据却传不到前端
+express工程自带端口监听
+
+问题:
+1.总想在入口.js里加对主页面的/路由，但是在node工程里，自己找index.html页面，很奇怪
+2.把里面的路由路径改了之后（和控制器路由路径依旧保持一致）对了一半，
+3.还有angular引用js文件路径问题，在express后端设置了静态目录public，把文件放在里面却不识别，但把文件放在和index.html同一路径下就好使了，不懂
+（3.好吧，(__dirname，+"/public"));多了个逗号，去掉逗号，发现路径基本好使，还有个点，不设置路由会自动读取public目录下的index.html文件
+
+设置sendfile('index.html')路由之后，如果public没有index.html页面才会自动使用该路由
+）

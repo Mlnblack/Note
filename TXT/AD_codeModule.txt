@@ -1,0 +1,106 @@
+
+////////////////////////Main函数基础
+//手机横竖屏测试
+ if(this.getResources().getConfiguration().orientation== Configuration.ORIENTATION_PORTRAIT)
+        setContentView(R.layout.XXX);
+        else setContentView(R.layout.XXX);
+
+//活动跳转
+Intent it=new Intent(MainActivity.this,XXX.class);
+itS.putExtra("XXX",username.getText().toString());//活动之间传递数据
+                    startActivity(it);
+
+/////////活动创建//1.编写活动类/2.编写布局文件/3.Manifest中注册活动
+protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.XXX);
+        
+    }
+//接收调用活动传递数据
+        Intent it=this.getIntent();
+        Bundle bd=it.getExtras();
+        String username=bd.getString("username");
+finish();//返回上一级活动
+
+
+//////////////////////////简单控件
+
+
+
+ //Button//////////////////////活动监听器形式
+    class ...... implement View.OnClickListener
+      .                  .
+    Button button=findViewById(R.id.button);
+    button.setOnClickListener(this);
+//方法实现
+    @Override
+    public void onClick(View v){
+        
+    }
+
+
+
+//RadioGroup////内部类形式
+    RadioGroup XX=findViewById(R.id.XXX);
+    XX.setOnCheckedChangeListener(new RadioOnCheckedChangeListener());
+    //内部类实现
+     class RadioOnCheckedChangeListener implements RadioGroup.OnCheckedChangeListener{
+        
+        @Override
+        public void onCheckedChanged(RadioGroup rg, int i)
+        {
+            
+        }
+
+
+
+//////////////////////////高级控件
+
+//高级控件Spinner/////////////////////匿名内部类形式//ArrayAdapter适配器
+        //设置对应适配器
+       static final String  TAGS="SpinnerSample";
+       static final String[] TECHNOLOGIES=new String[]{"Angular.js","React.js","Node.js","JavaScripts","Java"}
+
+        final ArrayAdapter<CharSequence> adapter=new ArrayAdapter<CharSequence>(this,android.R.layout.simple_spinner_item,TECHNOLOGIES);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);//设置下拉布局
+        //Spinner本身设置
+        Spinner spinner=findViewById(R.id.XXX);
+        spinner.setAdapter(adapter);
+
+        //Spinner匿名内部类监听器
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+            @Override
+            public void onItemSelected(AdapterView<?>parent,View view,int position,long id){
+                Log.i(TAGS,"选择："+adapter.getItem(position).toString());
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?>parent) {
+                Log.i(TAGS, "未选中");
+            }
+        });
+
+
+ //高级控件ListView/////////////////匿名内部类形式
+        //设置ArrayAdapter适配器
+        static final String TAGL="ListViewSample";
+        static final String[] ALGORITHM=new String[]{"分治法","回溯法","贪心法","分支限界法","动态规划法"};
+        ArrayAdapter<String> adapterlv=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,ALGORITHM);
+        
+        //设置ListView
+        ListView listV=findViewById(R.id.ListV1);
+        listV.setAdapter(adapterlv);
+        //设置监听器及方法实现
+        listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.i(TAGL,"选择："+ALGORITHM[i]);
+            }
+        });
+//高级控件Toast
+        Button XX=findViewById(R.id.XXX);
+        XX.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this,"XXXXX", Toast.LENGTH_LONG).show();
+            }
+        });
