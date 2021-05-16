@@ -1,3 +1,6 @@
+
+################程序层次#####################
+
 LLVM：架构编译器的框架系统，以C++编写而成
 Clang：Apple主导编写的，基于LLVM的C/C++/Objective-C编译器
 GCC（GNU Compiler Collection）：GNU编译器套件，由GNU开发的编译器
@@ -11,7 +14,37 @@ Ant：是一个将软件编译、测试、部署等步骤联系在一起加以�
 IDEA(IntelliJ IDEA/IntelliJ):Java编程语言开发的集成环境,智能编辑、代码分析、版本工具
 JDK(Java Development Kit)：Java开发工具，是整个Java的核心，包括了JRE(Java Runtime Enviroment)，一些Java工具和核心库，简单理解：开发Java程序时需要JDK，运行Java程序时需要JRE
 javac：Java的编译器
+#############################################
 
+
+
+####################语言层次#################
 Kotlin：一款基于JVM用于现代多平台应用的静态编程语言，16年公布，Andriod官方支持开发语言，兼容Java
 Groovy、Scala：基于JVM的语言，可以和Java很好的兼容，
-Scala：
+
+API：应用程序编程接口
+JNI(Java Native Interface)  :允许Java和C/C++编写的程序、模块库进行交互。
+Android NDK:提供一系列工具快速开发C/C++动态库，能自动将.so(linux平台)/.dll(windows平台)和Java应用一起打包到APK。
+
+
+Qpython:一款软件，可以在安卓手机上运行python，学习编程。安卓平台上的python引擎
+
+Kivy：开源的Python框架，可运行于各大桌面移动平台。
+
+P4A(Python for Android)：打包Python文件为APK
+
+termux:安卓平台模拟出linux，一款终端模拟器
+
+OpenGL(Open Graphics Library：开放图形库)：用于渲染2D、3D矢量图形的跨语言、跨平台API，可以绘制从简单的图形到复杂的三维景象
+Direct3D:微软所制定的3D规格界面，基于微软COM通用对象模式的3D图形API。[与OpenGL同为电脑绘图软体和电脑游戏最常使用的两套绘图编程接口之一]
+Direct2D:微软编写的2D图形API
+PCL(Point Cloud Library:点云库)：大型跨平台开源C++编程库，opencv是2D信息获取处理的结晶，pcl则是在3D领域有着同等地位
+opencv：一个跨平台计算机视觉和机器学习软件库，图像处理领域
+
+##############################################
+
+
+##################平台层次####################
+Windows：当今时代最流行的个人操作系统
+Linux：多用于服务器端
+macOS：苹果独家操作系统
