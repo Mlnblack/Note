@@ -1,0 +1,17 @@
+LLVM：架构编译器的框架系统，以C++编写而成
+Clang：Apple主导编写的，基于LLVM的C/C++/Objective-C编译器
+GCC（GNU Compiler Collection）：GNU编译器套件，由GNU开发的编译器
+gcc(GNU C Compiler)/g++(GNU C++Compiler):是GNU的C/C++编译器(根本上是根据要编译的文件类型，调用对应的GNU编译器、链接器、预处理器)[区别，gcc对于.c/.cpp分别编译，g++则统一当作cpp文件编译][PS:编译过程：预处理-->编译-->汇编-->链接]
+GNU：是一个自由的操作系统，意为GNU's Not Unix
+MinGW:(Minimalist GNU for Windows)Windows下的一套简单方便的基于GCC程序开发环境，编译器模块
+cmake：用来把C/C++源代码文件编译成EXE可执行程序、共享库，即—跨平台编译配置工具，1.编写CMakeLists.txt,2.cmake命令将该文件转化为make所需要的makefile文件，3.用make命令编译源码生成可执行程序或共享库（github：cmake-examples）[利用各种编译工具生成可执行程序或链接库，省去了复杂的makefile编写环节，makefile文件（make命令）：Windows平台很多IDE都做了这个工作，Linux用的多，在大型软件开发过程中，当个别文件改动后仅执行必要的处理，而不必重复整个编译过程，大大提高软件开发效率][make工具多种多样，GNU、QT、微软、BSD等，规范标准不同，跨平台要统一这个问题][gcc是编译器，用来编译一个文件，而make是编译多个源文件的工程文件的工具，即调用]
+Maven:一个java项目管理工具，基于Ant、Maven概念的工具，编译、发布、测试，管理jar包/库的工具
+gradle:基于JVM项目自动化构建开源工具，差异控制[exp：不同手机不同代码，一个命令打出不同的渠道包]、依赖管理[寻找、下载、添加]、部署[把写好的项目编译之后，放到服务器容器里面]，打包[发布成二进制形式，在其他环境中方便运行]
+Ant：是一个将软件编译、测试、部署等步骤联系在一起加以自动化的工具，多用于Java环境的软件开发
+IDEA(IntelliJ IDEA/IntelliJ):Java编程语言开发的集成环境,智能编辑、代码分析、版本工具
+JDK(Java Development Kit)：Java开发工具，是整个Java的核心，包括了JRE(Java Runtime Enviroment)，一些Java工具和核心库，简单理解：开发Java程序时需要JDK，运行Java程序时需要JRE
+javac：Java的编译器
+
+Kotlin：一款基于JVM用于现代多平台应用的静态编程语言，16年公布，Andriod官方支持开发语言，兼容Java
+Groovy、Scala：基于JVM的语言，可以和Java很好的兼容，
+Scala：
