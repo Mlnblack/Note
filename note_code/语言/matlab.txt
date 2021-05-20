@@ -1,0 +1,77 @@
+function output=name(input)
+%注释    1-列  2-行
+
+%%%%%%%%基本语句%% ;结束
+%%if语句%
+if
+else
+end
+
+%%%for语句%
+for name=1:valuename
+
+end
+
+%%%函数语句%
+function [output]=function_name(input)
+
+
+end
+
+
+%%%基本数据类型%%
+name='字符串';
+name=12;
+name4=sprintf('%d_%d07d,%s',name1,name2,name3);%字符串化
+
+%%%%%创建矩阵
+name=zeros(*,*,*);
+name=unifrnd(a,b,m,n);%生成m*n阶[a,b]随机均匀分布
+name=rand(m,n);%生成m*n阶[0,1]均匀分布的随机数矩阵
+name=rand(n);%生成n阶XXX
+
+name=[name 1:100];
+
+zeros(number,1/2);
+'转置
+
+%%%%%矩阵计算%%
+.*            %对应元素相乘
+*             %矩阵乘法
++    -        %对应位置加减
+name(5,:,:)=name_sub;%取数据时使用()
+
+
+size()
+[r,c]=size(A);%输出行列数
+size(A,1);%输出行数
+size(A,2);%输出列数
+
+sum()
+max()
+randi()
+reshape()
+B=reshape(A,m,n);%按列存放，
+repmat()多行多列复制
+repmat(A,m,n);%复制A，其中行复制m个，列复制n个
+unique()去掉重复值
+squeeze()去掉维度为1的维
+(:,:)任意行和列
+
+
+%%%%文件处理%%%%
+rgb=imread('路径+文件名.png');
+figure;
+imshow(rgb);
+
+load('路径+文件名.mat');
+save('路径+文件名.mat',‘矩阵变量’);
+
+fprintf('%s',name);%格式化输出
+
+%%%%可视化%%%%%
+figure;
+plot3(points(:,1),points(:,3),points(:,2),'.','MarkerSize',1.5);
+
+figure;
+scatter3(points(:,1),points(:,3),points(:,2),50,color,'Fill','LineWidth',0.5);
