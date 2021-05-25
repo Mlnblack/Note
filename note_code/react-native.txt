@@ -1,0 +1,85 @@
+基本组件
+
+#######第三方库########
+//RN<0.60
+npm install react-native-xxx --save
+react-native link react-native-xxx //没成功过
+改文件：
+1.MainApplication.java
+import org.reactnative.camera.RNCameraPackage;
+xx getPackages(){
+	....
+	packages.add(new RNCameraPackage());
+	return packages;
+}
+2.android/settings.gradles:
+include ':react-native-camera'
+project(':react-native-camera').projectDir = new File(rootProject.projectDir,   '../node_modules/react-native-camera/android')
+3.android/app/build/gradle:
+implementation project(':react-native-camera')
+4.添加权限：AndroidManifest.xml
+<!-- Required -->
+<uses-permission android:name="android.permission.CAMERA" />
+
+<!-- Include this only if you are planning to use the camera roll -->
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<!-- Include this only if you are planning to use the microphone for video recording -->
+<uses-permission android:name="android.permission.RECORD_AUDIO"/>
+5.android/app/build.gradle:
+android {
+  ...
+  defaultConfig {
+    ...
+    missingDimensionStrategy 'react-native-camera', 'general' // <--- insert this line
+  }
+}
+
+
+
+
+#######原生组件########
+//前三步文件均在android/app/src/main/java/com/app_name/下
+1.原生类    MyModule.class
+public class MyModule extends ReactContextBaseJavaModule{
+	MyModule{}
+	@Override
+	public String getName(){
+		return "MyModule";//App.js import时的名字
+	}
+	@ReactMethod    //导出一个方法给Js使用
+	public void xxx(xxx){
+		xxxxxxxxx;
+	}
+
+}
+2.注册模块   //CustomToastPackage.java
+public class CustomToastPackage implements ReactPackage{
+	@Override
+	public List<NativeModule> createNativeModules(){
+		.........
+		modules.add(new MyModule(reactContext));
+		return modules;
+	}
+}
+3.MainApplication.java
+import com.app_name.CustomToastPackage;
+xx getPackages(){
+	....
+	packages.add(new CustomToastPackage());
+	return packages;
+}
+(可选)封装成JS模块
+MyModule.js  ///和App.js同一路径
+import {NativeModules} from 'react-native';
+export default NativeModules.MyModule;
+最终----->调用
+App.js
+//可选下
+import MyModule from './MyModule';
+MyModule.xxx();
+//非可选下
+import {NativeModules} from 'react-native';
+NativeModules.MyModule.xxx();
+
+########集成到现有原生应用：
