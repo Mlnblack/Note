@@ -40,7 +40,7 @@ android {
 
 #######原生组件########
 //前三步文件均在android/app/src/main/java/com/app_name/下
-1.原生类    MyModule.class
+1.原生类    MyModule.java
 public class MyModule extends ReactContextBaseJavaModule{
 	MyModule{}
 	@Override

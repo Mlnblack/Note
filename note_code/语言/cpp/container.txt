@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+     return 0;
+}
+
+
+
+
+
+int vector_process()
+
+    return 0;
+}

@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+     return 0;
+}
+
+
+/////shared_ptr
+int shared_p(){
+   shared_ptr sp;
+   return 0;
+}
+
+
+//////unique_ptr
+int unique_p(){
+
+
+    return 0;
+}
+
+///////////////运算符
+int new_delete(){
+
+
+    return 0;
+}

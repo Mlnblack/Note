@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+
+
+
+int main(){
+
+
+
+    return 0;
+}
+
+/////////参数///////
+
+//默认参
+int functionInitial(int a=10,string b="liub"){
+
+   return 0;
+}
+
+///传参
+int functionByValue(){
+
+     return 0;
+}
+
+int functionByQuote(){
+
+
+  return 0;
+}
+
+int functionByAddress(){
+
+
+  return 0;
+}
+
+int functionByArray(){
+
+  return 0;
+}
+
+
+////////返回值
+
+//返回动态序列
+
+
+
+////////重载函数
+int copy(int a,int b){
+
+     return 0;
+}
+
+int copy(char a,char b){
+
+    return 0;
+}

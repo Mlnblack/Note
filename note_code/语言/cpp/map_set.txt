@@ -1,0 +1,103 @@
+#include<map>
+#include<set>
+#include<string>             ///soga
+#include<iostream>
+#include<iterator>
+#include<utility>
+using namespace std;
+
+int mapInitial();
+
+int main(){
+
+	map<string, int> book;
+	book.insert({"kongzi",3});
+	book.insert({ "mozi", 2 } );
+	book.insert({ "sunzi", 5 });
+
+	auto book_it = book.cbegin();
+	/*for (;book_it!=book.end();++book_it)
+	{
+		cout << "Author:" << book_it->first << " "
+			<< "Number:" << book_it->second << endl;
+	}*/
+
+	for (; book_it != book.end(); ++book_it)
+	{
+		cout << "Author:" << book_it->first << " "
+			<< "Number:" << book_it->second << endl;
+
+	}
+	system("pause");
+	return 0;
+}
+
+int mapAll(){
+	map<string, int> newBook;
+	multimap<string,int> book;
+	unordered_map<string,int> book2;
+	unordered_multimap<string, int> book3;
+	return 0;
+}
+
+int mapInitial(){
+	map<string, int> book;
+	book.insert({ "kongzi", 3 });
+	book.insert({ "mozi", 2 });
+	book.insert({ "sunzi", 5 });
+
+	map<string, int> newBook(book);
+
+	return 0;
+}
+
+int mapDel(){
+
+	return 0;
+}
+
+int mapVisit(){
+	map<string, int> book;
+	book.insert({ "kongzi", 3 });
+	book.insert({ "mozi", 2 });
+	book.insert({ "sunzi", 5 });
+
+	cout << "Mozi:"<<book["mozi"] << endl;
+	return 0;
+}
+
+
+
+////////set////////////////////////////
+int setAll(){
+	set<string> newBook;
+	multiset<string> book;
+	unordered_set<string> book2;
+	unordered_multiset<string> book3;
+	return 0;
+}
+
+int setInitial(){
+	map<string, int> book;
+	book.insert({ "kongzi", 3 });
+	book.insert({ "mozi", 2 });
+	book.insert({ "sunzi", 5 });
+
+	map<string, int> newBook(book);
+
+	return 0;
+}
+
+int setDel(){
+
+	return 0;
+}
+
+int setVisit(){
+	set<string> book;
+	
+	cout << "Mozi:"  << endl;
+	return 0;
+}
+
+
