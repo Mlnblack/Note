@@ -46,6 +46,14 @@ opencv：一个跨平台计算机视觉和机器学习软件库，图像处理�
 Redis：非关系型数据库，键值对存储系统主要做大数据库和后端的数据缓冲
 MongoDB：基于分布式文件存储的数据库，由C++编写，一种非关系型数据库
 
+
+################深度学习######################
+
+CUDA(Compute Unified Device Architecture)：显卡厂商NVIDIA推出的运算平台，一种通用并行计算架构。包含了CUDA指令集架构(ISA)以及GPU内部的并行计算引擎。可使用C/C++语言为该架构编写程序。
+nvcc(nvidia cuda compiler driver):CUDA开发环境下的C语言编译器，cuda有两种代码：运行在cpu上的host代码+运行在gpu上的device代码
+Cuda toolkit:该工具包只要包含了cuda-c/c++编译器、科学库和实用程序库、代码示例、一些CUDA开发工具
+cuDNN(Nvidia cuda_Deep Neural Network library):nvidia针对深度神经网络中的基础操作设计的基于GPU的加速库。
+
 ##################平台层次####################
 Windows：当今时代最流行的个人操作系统
 Linux：多用于服务器端
